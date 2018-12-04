@@ -127,7 +127,7 @@ public class LazySingletonWithUnsyncTest {
                 Assert.assertEquals(instanceUrl.get(i - 1), instanceUrl.get(i));
                 break;
             }
-            
+
             Assert.assertEquals(instanceUrl.get(i), instanceUrl.get(i + 1));
         }
     }

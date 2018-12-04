@@ -12,7 +12,8 @@ import java.util.concurrent.CyclicBarrier;
  * 1.由于懒汉式延时加载特性，使用该实例时才实例化，解决了饿汉式浪费内存资源的问题
  * 缺点:
  * 1.线程不安全, 只能在单线程环境下使用
- * 2.反序列化，反射{@link LazySingletonWithUnsyncTest}与克隆可破坏单例
+ * 2.反序列化，反射{@link }与克隆可破坏单例
+ *
  */
 public class LazySingletonWithUnsync {
 
@@ -22,10 +23,10 @@ public class LazySingletonWithUnsync {
 //            Thread.sleep(1000);
     }
 
-    // 2.1先不创建对象，等用到的时候再创建
+    // 2.1 先不创建对象，等用到的时候再创建
     private static LazySingletonWithUnsync counter = null;
 
-    // 2.2调用到这个方法了，证明是要被用到的了
+    // 2.2 当第一次调用该方法时, 再创建实例
     public static LazySingletonWithUnsync getInstance() throws InterruptedException {
 
         /**
