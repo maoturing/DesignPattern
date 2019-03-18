@@ -12,7 +12,7 @@ import java.util.concurrent.CyclicBarrier;
  * 1.由于懒汉式延时加载特性，使用该实例时才实例化，解决了饿汉式浪费内存资源的问题
  * 缺点:
  * 1.线程不安全, 只能在单线程环境下使用
- * 2.反序列化，反射{@link }与克隆可破坏单例
+ * 2.反序列化，反射与克隆可破坏单例
  *
  */
 public class LazySingletonWithUnsync {
