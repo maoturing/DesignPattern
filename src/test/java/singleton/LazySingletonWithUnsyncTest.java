@@ -12,7 +12,7 @@ import java.util.concurrent.CyclicBarrier;
 
 /**
  * 测试 懒汉-无锁 单例模式
- * {@link LazySingletonWithUnsync} Test
+ * {@link LazySingletonWithUnsync}
  */
 @Slf4j
 public class LazySingletonWithUnsyncTest {
