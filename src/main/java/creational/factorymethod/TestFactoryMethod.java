@@ -43,7 +43,7 @@ public class TestFactoryMethod {
         List<String> list = new ArrayList<>();
         list.add("mwq");
 
-        //  获取产品iter，产品的创建逻辑在java.util.ArrayList#iterator()方法中，产品类型是java.util.ArrayList.Itr
+        // 获取产品iter，产品的创建逻辑在java.util.ArrayList#iterator()方法中，产品类型是java.util.ArrayList.Itr
         // 同样的，如果JDK中以后增加了新的迭代器（产品），不用修改已有的类，只需新增实现类即可，符合开闭原则
         Iterator<String> iter = list.iterator();
         // iter instanceof ArrayList.Itr == true; Itr是私有类，可以在debug中测试观察
