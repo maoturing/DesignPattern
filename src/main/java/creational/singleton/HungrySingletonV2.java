@@ -6,6 +6,8 @@ import java.io.Serializable;
  * 饿汉式单例模式V2版本
  * 序列化防御：添加readResolve方法
  * 反射防御：构造方法添加添加反射防御
+ * 针对懒汉式的反射防御，无法完全避免，如果先反射，再获取实例，仍会破坏单例模式，
+ * 因为懒汉式创建实例晚，反射调用能通过hungrySingleton为null校验
  *
  * @author mao 2019-4-3 13:20
  */

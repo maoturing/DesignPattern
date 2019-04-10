@@ -8,7 +8,7 @@ package creational.singleton;
  * @author mao 2019-4-3 13:51
  */
 public class LazyDoubleCheckSingleton {
-    // volatile防止重排序
+    // volatile防止重排序，确保可见性，防止线程1
     private volatile static LazyDoubleCheckSingleton instance = null;
     private LazyDoubleCheckSingleton() {
     }
